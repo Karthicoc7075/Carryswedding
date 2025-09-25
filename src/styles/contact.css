@@ -1,0 +1,141 @@
+.contact-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: #F0EEFE;
+    width: 100%;
+}
+
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   
+    max-width: 1440px;
+      margin: 0 auto;
+}
+
+.contact-heading{
+     text-align: center;
+    margin-bottom: 1rem;
+    color: #B084E1;
+}
+
+.contact-heading  h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family:'Fraunces', serif;
+    margin-bottom: 1rem;
+}
+
+.contact-heading p {
+    font-size: 1.4rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 1rem;
+    color: #CFBAE8;
+}
+
+
+.contact-group{
+   display: grid;
+      grid-template-columns: 1fr 1fr;  
+  align-items: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+
+.contact-group .contact-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+
+.contact-group .contact-image img {
+     width: 360px;
+    height: 360px;
+}
+
+.contact-group  .contact-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.contact-group  .contact-form label{
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    color: #333;
+}
+
+.contact-group  .contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.contact-group input, .contact-group textarea {
+    width: 100%;
+  
+    padding: 0.8rem;
+    border: 1px solid #D5AFFF;
+    outline: none;
+    background-color:#FCF8FF ;
+    color: #9b63c9;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+}
+
+
+.contact-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+.contact-group button {
+    max-width: 180px;
+    background-color: #f2e9f8;
+    color:#B084E1;
+    border: 1px solid #B084E1;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'lora', serif  ;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.contact-group button:hover {
+    background-color: #9b63c9;
+}
+
+@media (max-width: 768px) {
+    .contact-group {
+        grid-template-columns: 100%;
+        gap: 2rem;
+    }
+
+    .contact-group .contact-image {
+       display: none;
+    }
+
+    .contact-group  .contact-form {
+        width: 100%;
+    }
+}

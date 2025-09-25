@@ -1,0 +1,223 @@
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    z-index: 1002;
+}
+
+.header .header-logo {
+    position: absolute;
+    top: -80px;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    background: #fff;
+    width: 260px;
+    height: 260px;
+    border-radius: 100%;
+    z-index: 1001;
+}
+
+.header .header-logo img {
+    height: 120px;
+}
+
+.menu-toggle {
+    display: block;
+    border-radius: 4px;
+    margin-right: 2rem;
+}
+
+
+.menu-toggle img {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.header .header-nav {
+    display: flex;
+    margin: 0 0 0 22rem;
+    align-items: center;
+}
+
+.header .header-nav .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+.header .header-nav .nav-list .nav-item .nav-link {
+    font-family: 'Readex Pro', serif;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+
+.header .header-nav .nav-list .nav-item .nav-link:hover {
+    font-weight: 600;
+}
+
+
+.header .header-nav .nav-list .nav-item .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: #B084E1;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.4rem .9rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.header .header-nav .nav-list .nav-item .contact-link:hover {
+    background-color: #9b6fd8;
+}
+
+.header .header-nav .nav-list .nav-item .contact-link .send-icon {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+
+@media (max-width:1200px) {
+    .header-wrapper {
+        padding: 0 1rem;
+    }
+
+    .header .header-logo {
+        width: 200px;
+        height: 200px;
+        top: -70px;
+        left: -28px;
+    }
+
+    .header .header-logo img {
+        height: 100px;
+    }
+
+    .header .header-nav {
+        margin: 0 0 0 18rem;
+    }
+
+
+   
+
+    .header .header-nav .nav-list {
+        gap: 1.5rem;
+    }
+
+    .header .header-nav .nav-list .nav-item .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .header .header-nav .nav-list .nav-item .contact-link {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .header .header-nav .nav-list .nav-item .contact-link .send-icon {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+
+@media (max-width:768px) {
+    .header {
+        position: fixed;
+       
+    }
+
+    .header-wrapper{
+        position: relative;
+        justify-content: end;
+        padding: 0.8rem;
+        height: 70px;
+        background-color: transparent;
+    }
+
+    .header .header-logo {
+        position: absolute;
+        top: 80%;
+        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 0;
+        width: 90px;
+        height: 90px;
+    }
+
+
+
+
+    .header .header-logo img {
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .header .header-nav {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 110px; 
+        margin: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+     
+
+    .header .header-nav.open {
+        display: flex !important;
+    }
+
+
+    .header .header-nav .nav-list {
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+
+    .header .header-nav .nav-list .nav-item .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .header .header-nav .nav-list .nav-item .contact-link {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .header .header-nav .nav-list .nav-item .contact-link .send-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+}

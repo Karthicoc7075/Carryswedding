@@ -1,0 +1,91 @@
+.whychoose-section {
+    position: relative;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DDBEFF;
+    width: 100%;
+}
+
+.whychoose-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.whychoose-heading {
+    font-size: 2rem;
+    font-family:'Fraunces', serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.whychoose-content {
+    text-align: center;
+        color: #fff;
+}
+
+.whychoose-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+    color: #fdfdfde5;
+}
+
+.whychoose-description {
+    font-family: "montserrat", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #fdfdfd;
+}
+
+.whychoose-points {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.whychoose-point {
+    flex: 1 1 30%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.whychoose-point-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #B084E1;
+}   
+.whychoose-point-title {
+    font-family: "montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.whychoose-point-description {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: "fraunces", serif;
+    text-transform:uppercase;
+    color: #fdfdfd;
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    .whychoose-points {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whychoose-point {
+        flex: 1 1 100%;
+        max-width: 400px;
+    }
+}

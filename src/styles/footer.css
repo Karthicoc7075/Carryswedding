@@ -1,0 +1,136 @@
+.footer-section {
+  background-color: #fcf8ff;
+  padding: 3rem 1.5rem;
+  color: #333;
+  font-family: 'Lora', serif;
+}
+
+.footer-heading h4 {
+    font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+
+.footer-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.footer-contact {
+  display: flex;
+    flex-direction: column;
+
+}
+
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-item img {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+}
+
+.footer-item p {
+  margin: 0;
+  color: #6b4c8d;
+  line-height: 1.5;
+}
+
+
+
+.footer-logo {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 300px;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo h4 {
+    font-family: 'montserrat', sans-serif;
+    text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b084e1;
+}
+
+
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-info h4 {
+font-family: 'montserrat', sans-serif;
+
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #7d52aa;
+}
+
+.footer-socials {
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.footer-socials img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.1);
+}
+
+.footer-info p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+
+@media (max-width: 768px) {
+  .footer-metadata {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-contact,
+  .footer-logo,
+  .footer-info {
+    flex: 1 1 100%;
+  }
+
+  .footer-item {
+    justify-content: center;
+  }
+}
