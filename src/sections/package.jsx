@@ -1,15 +1,15 @@
 import React from 'react'
 import '../styles/package.css'
-import serviceImage from '../assets/images/service .webp'
-import serviceImage1 from '../assets/images/service 1.webp'
-import serviceImage2 from '../assets/images/service 2.webp'
-import serviceImage3 from '../assets/images/service 3.webp'
-import serviceImage4 from '../assets/images/service 4.webp'
-import serviceImage5 from '../assets/images/service 5.webp'
-import serviceImage6 from '../assets/images/service 6.webp'
-import serviceImage7 from '../assets/images/service 7.webp'
-import serviceImage8 from '../assets/images/service 8.webp'
+import serviceImage1 from '../assets/images/categ-1.webp'
+import serviceImage2 from '../assets/images/categ-2.webp'
+import serviceImage3 from '../assets/images/categ-3.webp'
+import serviceImage4 from '../assets/images/categ-4.webp'
+import serviceImage5 from '../assets/images/categ-5.webp'
+import serviceImage6 from '../assets/images/categ-6.webp'
+import serviceImage7 from '../assets/images/categ-7.webp'
+import serviceImage8 from '../assets/images/categ-8.webp'   
 import ellipse from '../assets/images/Ellipse.svg'
+import PackageItem from '../components/packageItem'
 
 function Package() {
     const packages = [
@@ -23,7 +23,7 @@ function Package() {
                     descPoints:[
                         'Food for 500 people',
                     ],
-                    image: serviceImage2,
+                    image: serviceImage1,
                 },
                 {
                     title: 'DJ Setup',
@@ -31,14 +31,14 @@ function Package() {
                        'Honey comb Theme  ',
                         'Smoke Machine'
                     ],
-                    image: serviceImage3,
+                    image: serviceImage2,
                 },
                 {
                     title: 'Stage Decor',
                     descPoints:[
                         'Design your dream decor here',
                     ],
-                    image: serviceImage4,
+                    image: serviceImage3,
                 },
                 {
                     title: 'Photo & Vidoe',
@@ -46,7 +46,7 @@ function Package() {
                       'Traditional Photo & Video - 1',
                       'Wedding Album ( upto 300 Photos )'
                     ],
-                    image: serviceImage,
+                    image: serviceImage4,
                 },
                 {
                     title: 'Snacks Counter',
@@ -54,7 +54,7 @@ function Package() {
                         'Popcorn & Cotton Candy ( 2 hours )',
                         'Ice Cream ( 300 Members )'
                     ],
-                    image: serviceImage7,
+                    image: serviceImage5,
                 }
             ],
         },
@@ -68,7 +68,7 @@ function Package() {
                     descPoints:[
                         'Food for 500 people',
                     ],
-                    image: serviceImage2,
+                    image: serviceImage1,
                 },
                 {
                     title: 'DJ Setup',
@@ -77,14 +77,14 @@ function Package() {
                         'Smoke Machine',
                         'Dance Floor'
                     ],
-                    image: serviceImage3,
+                    image: serviceImage2,
                 },
                 {
                     title: 'Stage Decor',
                     descPoints:[
                         'Design your dream decor here',
                     ],
-                    image: serviceImage4,
+                    image: serviceImage3,
                 },
                 {
                     title: 'Photo & Vidoe',
@@ -93,7 +93,7 @@ function Package() {
                       'Wedding Album ( upto 300 Photos )',
                       'OutDoor shoot'
                     ],
-                    image: serviceImage,
+                    image: serviceImage4,
                 },
                 {
                     title: 'Snacks Counter',
@@ -101,14 +101,14 @@ function Package() {
                         'Popcorn & Cotton Candy ( 2 hours )',
                         'Ice Cream & Welcome Drink ( 700 Members )'
                     ],
-                    image: serviceImage7,
+                    image: serviceImage5,
                 },
                 {
                     title: 'Wedding Girl',
                     descPoints:[
                         'Warm welcome to the wedding'
                     ],
-                    image: serviceImage8,
+                    image: serviceImage6 ,
                 }
             ],
         },
@@ -122,7 +122,7 @@ function Package() {
                     descPoints:[
                         'Food for 500 people',
                     ],
-                    image: serviceImage2,
+                    image: serviceImage1,
                 },
                 {
                     title: 'DJ Setup',
@@ -131,14 +131,14 @@ function Package() {
                         'Smoke Machine',
                         'Dance Floor'
                     ],
-                    image: serviceImage3,
+                    image: serviceImage2,
                 },
                 {
                     title: 'Stage Decor',
                     descPoints:[
                         'Design your dream decor here',
                     ],
-                    image: serviceImage4,
+                    image: serviceImage3,
                 },
                 {
                     title: 'Photo & Vidoe',
@@ -146,7 +146,7 @@ function Package() {
                       'Traditional Photo & Video - 1',
                       'Wedding Album - 2 ( upto 300 Photos )'
                     ],
-                    image: serviceImage,
+                    image: serviceImage4,
                 },
                 {
                     title: 'Snacks Counter',
@@ -154,29 +154,42 @@ function Package() {
                         'Popcorn & Cotton Candy ( 2 hours )',
                         'Ice Cream & Welcome Drink ( 1000 Members )'
                     ],
-                    image: serviceImage7,
+                    image: serviceImage5,
                 },
                 {
                     title: 'Wedding Girl',
                     descPoints:[
                         'Warm welcome to the wedding'
                     ],
-                    image: serviceImage8,
+                    image: serviceImage6 ,
+                },
+                {
+                    title: 'Wedding Dance',
+                    descPoints:[
+                        'Special Dance Performance'
+                    ],
+                    image: serviceImage7,
                 },
                 {
                     title: 'Chenda Melam',
                     descPoints:[
                         'Grand welcome with Chenda Melam'
                     ],
-                    image: serviceImage6,
+                    image: serviceImage8,
                 }
             ],
         },
 
                          
             ]
+
+
+
+
+          
   return (
-    <section className="package-section" id="package">
+    
+    <section id="package" className="package-section">
             <div className="package-heading">
                 <h2>Our Packages</h2>
             </div>
@@ -184,43 +197,7 @@ function Package() {
         <div className="package-wrapper">
             {
                 packages.map((singlePackage, index) => (
-                    <div className="package" key={index}>
-                        <div className='package-header'>
-                            <div className="package-name"> 
-                                <h3>{singlePackage.name}</h3>
-                            </div>
-                            {/* <div className="package-price">
-                                <img src={ellipse} alt="Ellipse" />
-                                <h3>{singlePackage.price}</h3>
-                            </div> */}
-                        </div>
-                        <div className="package-services">
-                          <div className="package-services-wrapper">
-                             {
-                            singlePackage.services.map((service, idx) => (
-                                 <div className='package-service' >
-                                <div className="package-service-image"> 
-                                    <img src={service.image} alt={service.title} />
-                                </div>
-                                <div className="package-service-text">
-                                    <h4>{service.title}</h4>
-                                    <ul>
-                                        {service.descPoints.map((point, i) => (
-                                            <li key={i}>{point}</li>
-                                        ))} 
-                                    </ul>
-                                </div>
-
-                            </div>))
-                           }
-                            </div>
-                        </div>
-                           <div className="package-desc">
-                             <div className="package-desc-wrapper">
-                                <p>{singlePackage.desc}</p>
-                            </div>
-                            </div>
-                            </div>
+                   <PackageItem key={index} singlePackage={singlePackage} index={index} />
                 ))
             }
         </div>

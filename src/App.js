@@ -9,12 +9,14 @@ import Highlight from './sections/highlight';
 import Package from './sections/package';
 import Contact from './sections/contact';
 import Footer  from './sections/footer'
-
+import Location from './sections/location';
+import { ToastContainer} from 'react-toastify';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <ToastContainer />
       <Hero />  
       <About />
       <Whychoose />
@@ -22,6 +24,7 @@ function App() {
       <Highlight />
       <Package />
       <Contact />
+      <Location />
       <Footer />
     </div>
   );

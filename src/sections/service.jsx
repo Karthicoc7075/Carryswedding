@@ -1,34 +1,44 @@
 import React from 'react'
-import servicesImage1 from '../assets/images/service 1.webp'
-import servicesImage2 from '../assets/images/service 2.webp'
-import servicesImage3 from '../assets/images/service 3.webp'
-import servicesImage4 from '../assets/images/service 4.webp'
-import servicesImage5 from '../assets/images/service 5.webp'
+import PhotographyImage from '../assets/images/photograph.webp'
+import CaterIngImage from '../assets/images/catering.webp'
+import DJImage from '../assets/images/dj.webp'
+import DecorationImage from '../assets/images/stageDecor.webp'
+import SnackImage from '../assets/images/snack.webp'
+import ChendaMelam from '../assets/images/chendaMelam.webp'
+
 import '../styles/service.css'
 export default function Service() {
-
-
+ 
     const services = [
         {
             title: 'Photography',
-            image: servicesImage1,
+            image: PhotographyImage,
         },
         {
             title: 'Catering Services',
-            image: servicesImage2,
+            image: CaterIngImage,
         },
         {
             title: 'DJ & Entertainment', 
-            image: servicesImage3,
+            image: DJImage,
         },
         {
             title: 'Stage Decoration',
-            image: servicesImage4,
+            image: DecorationImage,
+        },
+        {
+            title: 'Snacks & Sweets',
+            image: SnackImage,
+        },
+        {
+            title: 'Chenda Melam',
+            image: ChendaMelam,
         },
     ];
 
+   
   return (
-    <section className="service-section">
+    <section id="whatwedo" className="service-section">
             <div className='service-wrapper' >
                 <div className='service-heading'>
                     <h2>Our Services</h2>

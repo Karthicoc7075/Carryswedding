@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     align-items: end;
-    height: calc(100dvh - 100px);
+    height: 100dvh;
     overflow: hidden;
     z-index: -1;
 }   
@@ -19,17 +19,16 @@
 
 .hero-section .hero-image img {
     width: 100dvw;
-    height: calc(100dvh - 100px);
+    height: 100dvh;
     object-fit: cover;;
 }
 
 .hero-section .hero-content {
     position: relative;
     width: 100%;
-    padding:  20px 20px 9rem 20px;
     color: #FFF;
     text-align: center;
-   
+     transform: translateY(-25%);
 }
 
 .hero-section .hero-content .overlay {
@@ -77,10 +76,7 @@
 
 
 
-     .hero-content {
-        padding:  20px 10px 7rem 10px !important;
-    }
-
+ 
 
 }
 
@@ -108,10 +104,6 @@
 
 
 
-    .hero-content {
-        padding:  20px 10px 5rem 10px !important;
-    }
-    
 }
 
 
@@ -127,8 +119,6 @@
         font-size: 0.9rem;
         padding: 0 5px;
     }
-    .hero-content {
-        padding:  20px 5px 2rem 5px !important;
-    }
+ 
     
 }

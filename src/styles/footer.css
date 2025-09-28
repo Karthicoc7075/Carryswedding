@@ -19,7 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -29,14 +29,22 @@
 .footer-contact {
   display: flex;
     flex-direction: column;
+  gap: 1.5rem;
+}
 
+.footer-contact-numbers a { 
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
 }
 
 .footer-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .footer-item img {
@@ -44,10 +52,14 @@
   height: 24px;
   margin-top: 4px;
 }
-
-.footer-item p {
+.footer-contact-numbers{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.footer-item a {
   margin: 0;
-  color: #6b4c8d;
+  color: #b084e1;
   line-height: 1.5;
 }
 
@@ -89,7 +101,7 @@ font-family: 'montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 1rem;
-  color: #7d52aa;
+  color: #b084e1;
 }
 
 .footer-socials {
