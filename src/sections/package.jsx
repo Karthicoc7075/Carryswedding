@@ -1,19 +1,13 @@
 import React from 'react'
 import '../styles/package.css'
-import serviceImage1 from '../assets/images/categ-1.webp'
-import serviceImage2 from '../assets/images/categ-2.webp'
-import serviceImage3 from '../assets/images/categ-3.webp'
-import serviceImage4 from '../assets/images/categ-4.webp'
-import serviceImage5 from '../assets/images/categ-5.webp'
-import serviceImage6 from '../assets/images/categ-6.webp'
-import serviceImage7 from '../assets/images/categ-7.webp'
-import serviceImage8 from '../assets/images/categ-8.webp'   
 import ellipse from '../assets/images/Ellipse.svg'
 import PackageItem from '../components/packageItem'
 
-function Package() {
-    const packages = [
+
+
+ const packages = [
         {
+            id: 1,
             name: 'Standard Package',
             desc: 'We offer essential wedding services for up to 500 guests, including delicious catering, elegant décor, professional photography, and lively entertainment — all tailored to your needs. Our team is here to guide you through every detail, so feel free to discuss your vision with us and let’s create a celebration to remember.',
             price: '2 Lakh"s',
@@ -23,7 +17,7 @@ function Package() {
                     descPoints:[
                         'Food for 500 people',
                     ],
-                    image: serviceImage1,
+                    image: 'categ-1.webp',
                 },
                 {
                     title: 'DJ Setup',
@@ -31,22 +25,22 @@ function Package() {
                        'Honey comb Theme  ',
                         'Smoke Machine'
                     ],
-                    image: serviceImage2,
+                    image: 'categ-2.webp',
                 },
                 {
                     title: 'Stage Decor',
                     descPoints:[
                         'Design your dream decor here',
                     ],
-                    image: serviceImage3,
+                    image: 'categ-3.webp',
                 },
                 {
-                    title: 'Photo & Vidoe',
+                    title: 'Photo & Video',
                     descPoints:[
                       'Traditional Photo & Video - 1',
                       'Wedding Album ( upto 300 Photos )'
                     ],
-                    image: serviceImage4,
+                    image: 'categ-4.webp',
                 },
                 {
                     title: 'Snacks Counter',
@@ -54,11 +48,12 @@ function Package() {
                         'Popcorn & Cotton Candy ( 2 hours )',
                         'Ice Cream ( 300 Members )'
                     ],
-                    image: serviceImage5,
+                    image: 'categ-5.webp',
                 }
             ],
         },
          {
+            id: 2,
             name: 'Premium Package',
             desc: 'We offer essential wedding services for up to 700 guests, including delicious catering, elegant décor, professional photography, and lively entertainment — all tailored to your needs. Our team is here to guide you through every detail, so feel free to discuss your vision with us and let’s create a celebration to remember.',
             price: '4 Lakh"s',
@@ -66,9 +61,9 @@ function Package() {
                 {
                     title: 'High Class Food',
                     descPoints:[
-                        'Food for 500 people',
+                        'Food for 700 people',
                     ],
-                    image: serviceImage1,
+                    image: 'categ-1.webp',
                 },
                 {
                     title: 'DJ Setup',
@@ -77,23 +72,23 @@ function Package() {
                         'Smoke Machine',
                         'Dance Floor'
                     ],
-                    image: serviceImage2,
+                    image: 'categ-2.webp',
                 },
                 {
                     title: 'Stage Decor',
                     descPoints:[
                         'Design your dream decor here',
                     ],
-                    image: serviceImage3,
+                    image: 'categ-3.webp',
                 },
                 {
-                    title: 'Photo & Vidoe',
+                    title: 'Photo & Video',
                     descPoints:[
                       'Traditional Photo & Video - 1',
                       'Wedding Album ( upto 300 Photos )',
                       'OutDoor shoot'
                     ],
-                    image: serviceImage4,
+                    image: 'categ-4.webp',
                 },
                 {
                     title: 'Snacks Counter',
@@ -101,18 +96,19 @@ function Package() {
                         'Popcorn & Cotton Candy ( 2 hours )',
                         'Ice Cream & Welcome Drink ( 700 Members )'
                     ],
-                    image: serviceImage5,
+                    image: 'categ-5.webp',
                 },
                 {
-                    title: 'Wedding Girl',
+                    title: 'Welcome Girls',
                     descPoints:[
                         'Warm welcome to the wedding'
                     ],
-                    image: serviceImage6 ,
+                    image: 'categ-6.webp',
                 }
             ],
         },
          {
+            id: 3,
             name: 'Elite Package',
             desc: 'We offer essential wedding services for up to 1000 guests, including delicious catering, elegant décor, professional photography, and lively entertainment — all tailored to your needs. Our team is here to guide you through every detail, so feel free to discuss your vision with us and let’s create a celebration to remember.',
             price: '6 Lakh"s',
@@ -120,9 +116,9 @@ function Package() {
                 {
                     title: 'High Class Food',
                     descPoints:[
-                        'Food for 500 people',
+                        'Food for 1000 people',
                     ],
-                    image: serviceImage1,
+                    image: 'categ-1.webp',
                 },
                 {
                     title: 'DJ Setup',
@@ -131,22 +127,22 @@ function Package() {
                         'Smoke Machine',
                         'Dance Floor'
                     ],
-                    image: serviceImage2,
+                    image: 'categ-2.webp',
                 },
                 {
                     title: 'Stage Decor',
                     descPoints:[
                         'Design your dream decor here',
                     ],
-                    image: serviceImage3,
+                    image: 'categ-3.webp',
                 },
                 {
-                    title: 'Photo & Vidoe',
+                    title: 'Photo & Video',
                     descPoints:[
                       'Traditional Photo & Video - 1',
                       'Wedding Album - 2 ( upto 300 Photos )'
                     ],
-                    image: serviceImage4,
+                    image: 'categ-4.webp',
                 },
                 {
                     title: 'Snacks Counter',
@@ -154,34 +150,40 @@ function Package() {
                         'Popcorn & Cotton Candy ( 2 hours )',
                         'Ice Cream & Welcome Drink ( 1000 Members )'
                     ],
-                    image: serviceImage5,
+                    image: 'categ-5.webp',
                 },
                 {
-                    title: 'Wedding Girl',
+                    title: 'Welcome Girls',
                     descPoints:[
                         'Warm welcome to the wedding'
                     ],
-                    image: serviceImage6 ,
+                    image: 'categ-6.webp',
                 },
                 {
                     title: 'Wedding Dance',
                     descPoints:[
                         'Special Dance Performance'
                     ],
-                    image: serviceImage7,
+                    image: 'categ-7.webp',
                 },
                 {
                     title: 'Chenda Melam',
                     descPoints:[
                         'Grand welcome with Chenda Melam'
                     ],
-                    image: serviceImage8,
+                    image: 'categ-8.webp',
                 }
             ],
         },
 
                          
             ]
+
+
+const Package = React.memo(() => {
+    console.log("Package Rendered"  );
+    
+   
 
 
 
@@ -197,13 +199,13 @@ function Package() {
         <div className="package-wrapper">
             {
                 packages.map((singlePackage, index) => (
-                   <PackageItem key={index} singlePackage={singlePackage} index={index} />
+                   <PackageItem key={index} singlePackage={singlePackage} />
                 ))
             }
         </div>
     </section>
   )
-}
+})
 
 export default Package
                           

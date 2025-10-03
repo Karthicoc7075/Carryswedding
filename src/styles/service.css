@@ -23,6 +23,15 @@
     margin: 8rem 0 4rem;
 }
 
+.service-carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #f8f9fa;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
 
 .service-list {
     display: flex;
@@ -33,6 +42,7 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 10px;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 
@@ -43,7 +53,7 @@
     border-radius: 20px;
     padding: 1rem;
     text-align: center;
-    transition: transform 0.3s ease;
+       
 }
 
 
@@ -58,12 +68,22 @@
     margin-bottom: 1rem;
 }
 
+.service-image span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: #e0e0e0;
+    animation: pulse 1.5s infinite;
+}
+
 
 .service-image img {
     width: 100%;
     height: 100%;
     border-radius: 16px;
     object-fit: cover;
+
 }
 
 .service-title {

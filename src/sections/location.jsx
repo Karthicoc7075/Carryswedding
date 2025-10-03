@@ -4,7 +4,7 @@ import '../styles/location.css'
 import locationImage from '../assets/images/location-image.webp'
 
 
-function Location() {
+const Location = React.memo(() => {
   return (
     <section className="location-section">
         <div className="location-wrapper">
@@ -18,6 +18,6 @@ function Location() {
           </div>
     </section>      
   )
-}
+})
 
 export default Location

@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/about.css'
 import aboutImage from '../assets/images/about-image.jpeg'
 
-function About() {
+const About = React.memo(() => {
   return (
     <section id='about'  className="about-section">
        <div className='about-wrapper' >
@@ -14,6 +14,8 @@ function About() {
         <div className='about-content' >
             <div className='about-image' >
             <img src={aboutImage} alt="About Us" />
+            <h2>Balaji Ragupathi</h2>
+            <p className='about-role' >Event Director</p>
               </div>
               <div className='about-text' >    
          <p>Weddings are not just events—they are stories of love, traditions, and celebrations that last a lifetime. At Cary’s Wedding Event, we specialize in bringing those stories to life with elegance, creativity, and flawless execution.</p>
@@ -28,6 +30,6 @@ function About() {
         </div>
     </section>
   )
-}
+})
 
 export default About

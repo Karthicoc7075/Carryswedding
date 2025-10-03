@@ -1,12 +1,18 @@
-import React from 'react'
+import React,{useMemo} from 'react'
 import '../styles/package.css'
 import ellipse from '../assets/images/Ellipse.svg'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-function PackageItem({ singlePackage, index }) {
-  const isEven = index % 2 === 0;
+const images = require.context("../assets/images", false, /\.(png|jpe?g|svg|webp)$/);
+
+
+
+const  PackageItem = React.memo(({ singlePackage}) => {
+  const isEven = singlePackage.id % 2 === 0;
+
 
   return (
-     <div className="package" key={index}>
+     <div className="package" key={singlePackage.id}>
                  
      <div className={`package-header ${!isEven ? 'even-layout' : 'odd-layout'}`}>
       <div className="package-price">
@@ -28,12 +34,19 @@ function PackageItem({ singlePackage, index }) {
 </div>
                         <div className="package-services">
                           <div className="package-services-wrapper">
-                             {
-                            singlePackage.services.map((service, idx) => (
-                                 <div className='package-service' >
-                                <div className="package-service-image"> 
-                                    <img src={service.image} alt={service.title} />
-                                </div>
+                             {singlePackage.services.map((service, idx) => (
+            <div className='package-service' key={idx}>
+              <div className="package-service-image"> 
+                              
+                  <LazyLoadImage
+                    effect="blur"
+                    height={120}
+                    width={160} 
+                    src={images(`./${service.image}`)} 
+                    alt={service.title} 
+                  />
+              </div>
+              
                                 <div className="package-service-text">
                                     <h4>{service.title}</h4>
                                     <ul>
@@ -55,6 +68,6 @@ function PackageItem({ singlePackage, index }) {
                             </div>
     
   );
-}
+})
 
-export default PackageItem
+export default PackageItem;

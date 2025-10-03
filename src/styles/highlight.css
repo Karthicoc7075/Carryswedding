@@ -19,6 +19,8 @@
     width: 100dvw;
     height: 100%;
     object-fit: cover;
+     will-change: auto;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 

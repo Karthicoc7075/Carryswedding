@@ -2,9 +2,9 @@ import React from 'react'
 import '../styles/hero.css'
 import heroImage from '../assets/images/hero-background.webp'
 
-function Hero() {
+const Hero = React.memo(() => {
   return (
-    <section id='/' className="hero-section">
+    <section id='#' className="hero-section">
         <div className="hero-image">
             <img src={heroImage} alt="Hero Background" className="background-image" />
         </div>
@@ -17,6 +17,6 @@ function Hero() {
       
     </section>
   )
-}
+})
 
 export default Hero

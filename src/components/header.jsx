@@ -5,33 +5,24 @@ import sendIcon from '../assets/icons/send-icon.png'
 import menuIcon from '../assets/icons/Menu Icon.png'
 import closeIcon from '../assets/icons/Close Icon.png'
 
-function Header() {
-     const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Header = React.memo(({ scrollToSection, activeSection, refs }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-
-  console.log(isMenuOpen)
-
+  const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+// console.log("Header Rendered", scrolled);
+// console.log("Active Section:", activeSection);
+
 
   return (
     <header className="header">
@@ -54,11 +45,11 @@ function Header() {
       </button>
         <nav className={`header-nav ${isMenuOpen ? 'open' : ''}`}>
             <ul className="nav-list">
-                <li className="nav-item"><a href="/" onClick={() => setIsMenuOpen(false)} className="nav-link">Home</a></li>
-                <li className="nav-item"><a href="#about" onClick={() => setIsMenuOpen(false)} className="nav-link">About</a></li>
-                <li className="nav-item"><a href="#whatwedo" onClick={() => setIsMenuOpen(false)} className="nav-link">What we do</a></li>
-                <li className="nav-item"><a href="#package" onClick={() => setIsMenuOpen(false)} className="nav-link">Package</a></li>
-                <li className="nav-item"><a href="#contact" onClick={() => setIsMenuOpen(false)} className="nav-link contact-link"><img src={sendIcon} alt="Send Icon" className="send-icon" /> <span>Get in Touch</span></a></li>
+                <li className="nav-item"><button onClick={() => { setIsMenuOpen(false); scrollToSection(refs.heroRef); }} className={`nav-link ${activeSection === 'hero' ? 'active' : ''}`}>Home</button></li>
+                <li className="nav-item"><button onClick={() => { setIsMenuOpen(false); scrollToSection(refs.aboutRef); }} className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</button></li>
+                <li className="nav-item"><button onClick={() => { setIsMenuOpen(false); scrollToSection(refs.serviceRef); }} className={`nav-link ${activeSection === 'service' ? 'active' : ''}`}>What we do</button></li>
+                <li className="nav-item"><button onClick={() => { setIsMenuOpen(false); scrollToSection(refs.packageRef); }} className={`nav-link ${activeSection === 'package' ? 'active' : ''}`}>Package</button></li>
+                <li className="nav-item"><button onClick={() => { setIsMenuOpen(false); scrollToSection(refs.contactRef); }} className={`contact-link ${activeSection === 'contact' ? 'active' : ''}`}><img src={sendIcon} alt="Send Icon" className="send-icon" /> <span>Get in Touch</span></button></li>
             </ul>
         </nav>
 
@@ -67,6 +58,6 @@ function Header() {
     </header>
 
   )
-}
+})
 
 export default Header

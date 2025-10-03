@@ -5,37 +5,50 @@ import DJImage from '../assets/images/dj.webp'
 import DecorationImage from '../assets/images/stageDecor.webp'
 import SnackImage from '../assets/images/snack.webp'
 import ChendaMelam from '../assets/images/chendaMelam.webp'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import '../styles/service.css'
-export default function Service() {
- 
-    const services = [
+
+  const services = [
         {
+            id: 1,
             title: 'Photography',
             image: PhotographyImage,
+
         },
         {
+            id: 2,
             title: 'Catering Services',
             image: CaterIngImage,
         },
         {
-            title: 'DJ & Entertainment', 
+            id: 3,
+            title: 'DJ & Entertainment',
             image: DJImage,
         },
         {
+            id: 4,
             title: 'Stage Decoration',
             image: DecorationImage,
         },
         {
-            title: 'Snacks & Sweets',
+            id: 5,
+            title: 'Snacks Counter',
             image: SnackImage,
         },
         {
-            title: 'Chenda Melam',
+            id: 6,
+            title: 'Traditional Chenda Melam',
             image: ChendaMelam,
-        },
+        }
     ];
 
+
+const Service = React.memo(() => {
+    console.log("Service Rendered");
+    
+ 
+  
    
   return (
     <section id="whatwedo" className="service-section">
@@ -48,10 +61,14 @@ export default function Service() {
                 <div className='service-content' >
                     <ul className='service-list' >
                       {
-                        services.map((service, index) => (
-                            <li key={index} className='service-item' >
+                        services.map((service) => (
+                            <li key={service.id} className='service-item' >
                                 <div className='service-image' >
-                                    <img src={service.image} alt={service.image} />
+                                    <LazyLoadImage
+                                        src={service.image}
+                                        alt={service.title}
+                                        effect="blur"
+                                    />
                                 </div>
                                 <h3 className='service-title' >{service.title}</h3>
                             </li>
@@ -63,4 +80,6 @@ export default function Service() {
     </section>
 
          )
-}
+})
+
+export default Service

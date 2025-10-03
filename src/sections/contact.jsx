@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 
-function Contact() {
+const Contact = React.memo(() => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -45,8 +45,8 @@ function Contact() {
 
            
            const result = await emailjs.send(
-        'service_r5r55xt',
-        'template_ruwxm9d',
+        'service_v1vu43h',
+        'template_yda97um',
         {
             user_name: formData.name,
             user_email: formData.email,
@@ -54,7 +54,7 @@ function Contact() {
             user_district: formData.district,
             message: formData.message
         },
-        'ox2qC5-yE6cga8IxT'
+        '0tcKlvlqB5B7MeM5I'
       )
      
       console.log(result.text);
@@ -166,6 +166,6 @@ function Contact() {
             </div>
         </section>
     )
-}
+})
 
 export default Contact

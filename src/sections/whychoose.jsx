@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/whychoose.css'
 
-function Whychoose() {
+const Whychoose = React.memo(() => {
   return (
     <section className="whychoose-section">
          <div className='whychoose-wrapper' >
@@ -30,6 +30,6 @@ function Whychoose() {
     </section>
   )
              
-}
+})
 
 export default Whychoose

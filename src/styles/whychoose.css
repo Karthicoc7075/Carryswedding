@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #DDBEFF;
+    background-color: #B084E1;
     width: 100%;
 }
 
@@ -16,7 +16,7 @@
 
 .whychoose-heading {
     font-size: 2rem;
-    font-family:'Fraunces', serif;
+    font-family:'Fraunces', sens;
     color: #fff;
     text-align: center;
     margin-bottom: 2rem;
