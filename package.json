@@ -12,7 +12,6 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-lazy-load-image-component": "^1.6.3",
-    "react-lazyload": "^3.2.1",
     "react-scripts": "^5.0.1",
     "react-toastify": "^11.0.5",
     "something": "^0.0.1",
